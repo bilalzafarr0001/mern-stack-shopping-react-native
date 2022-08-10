@@ -1,7 +1,7 @@
 import { Platform } from 'react-native';
 
 
-let baseUrl='http://10.20.18.40:3000/api/v1/';
+let baseUrl='http://192.168.1.7:3000/api/v1/';
 
 
 // {Platform.OS === 'android' 

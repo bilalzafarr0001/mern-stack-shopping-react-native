@@ -29,7 +29,7 @@ const Confirm = (props) => {
     const order = x.order.order;
     var products = [];
     if(order) {
-        order.orderItems.forEach((cart) => {
+        order.orderItems?.forEach((cart) => {
             axios
               .get(`${baseURL}products/${cart.product}`)
               .then((data) => {
@@ -45,7 +45,7 @@ const Confirm = (props) => {
   };
 
   const confirmOrder = () => {
-    const order = finalOrder.order.order;
+    const order = finalOrder?.order.order;
     axios
       .post(`${baseURL}orders`, order)
       .then((res) => {
